@@ -1,0 +1,7 @@
+{
+"vers":"alpha",
+"port":"30000",
+"server_port":"545454",
+"server_ip":"127.0.0.1",
+"game":"incinerateur"
+}
