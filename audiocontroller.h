@@ -17,6 +17,7 @@ public Q_SLOTS:
     void Slot_RCon(QJsonObject data);
     void onStateChanged(QMediaPlayer::MediaStatus state);
 
+
 Q_SIGNALS:
     void Signal_RCon_Game(QJsonObject data);
     void Signal_RCon_Network(QJsonObject data);

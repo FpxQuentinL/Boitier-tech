@@ -64,8 +64,8 @@ void clientIO::writeSocket(QJsonObject packet)
 
 void clientIO::Initialize(QJsonObject config)
 {
-    qDebug() << "Conection to :"  << config.value("adress").toString() << ":" << config.value("adress").toString();
-    //_io2.connect("http://localhost:3000");
-    _io2.connect("http://localhost:3000");
+//    qDebug() << "Conection to :"  << config.value("adress").toString() << ":" << config.value("adress").toString();
+//    //_io2.connect("http://localhost:3000");
+//    _io2.connect("http://localhost:3000");
 
 }

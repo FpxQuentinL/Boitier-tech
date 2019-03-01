@@ -18,6 +18,8 @@ AudioController::AudioController(QObject *parent)
 void AudioController::playSound(QJsonObject data)
 {
     for (int i = 0; i < _listplayer.length(); i++) {
+
+
         if (_listplayer[i]->state() == QMediaPlayer::StoppedState) {
             _listplayer[i]->setMedia(QMediaContent(QUrl(data.value("path").toString())));
             _listplayer[i]->setVolume(10);
@@ -32,7 +34,8 @@ void AudioController::playSound(QJsonObject data)
                qDebug("Enebale Permanently Recast");
                connect(_listplayer[i], SIGNAL(mediaStatusChanged(QMediaPlayer::MediaStatus)), _listplayer[i] , SLOT(play()));            }
             return;
-        }
+           }
+
     }
     qDebug() << "creation d'une nouvelle instance de QmediaPlayer";
     _listplayer.append( new QMediaPlayer() );
@@ -126,7 +129,7 @@ void AudioController::onStateChanged(QMediaPlayer::MediaStatus state)
 
 void AudioController::Slot_RCon(QJsonObject data) //a definir si recup ou scpecifie l'instance.
 {
-    qDebug()<<">Slot_RCon_AudioController<";
+    //qDebug()<<">Slot_RCon_AudioController<";
 
     if (data.contains("command")) {
         if (data.value("command") == "play")

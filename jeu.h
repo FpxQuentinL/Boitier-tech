@@ -18,8 +18,10 @@ public:
     bool Game_Success();
     bool Game_Fail();
     bool Game_Socketio();
+    bool _First = true;
     void Setup();
     static void InteruptGeneral();
+    bool _AudioAlreadyPlaying=false;
     QString _AudioPathInterupt;
     QString _AudioPathAmbiance;
     QSerialPort _serialPort;
